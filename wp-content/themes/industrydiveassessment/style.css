@@ -1,0 +1,617 @@
+/*!
+Theme Name: IndustryDiveAssessment
+Theme URI: https://github.com/mabfahad/industryDive
+Author: Md Abdullah Al Fahad
+Author URI: https://github.com/mabfahad/
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: industrydiveassessment
+*/
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Invention Regular';
+}
+
+@font-face {
+    font-family: 'Invention Bold';
+    src: url('../industrydiveassessment/assets/fonts/Invention-Bold.eot');
+    src: url('../industrydiveassessment/assets/fonts/Invention-Bold.eot') format('embedded-opentype'),
+        url('../industrydiveassessment/assets/fonts/Invention-Bold.woff2') format('woff2'),
+        url('../industrydiveassessment/assets/fonts/Invention-Bold.woff') format('woff'),
+        url('../industrydiveassessment/assets/fonts/Invention-Bold.ttf') format('truetype'),
+        url('../industrydiveassessment/assets/fonts/Invention-Bold.svg') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Invention ExtraBold';
+    src: url('../industrydiveassessment/assets/fonts/Invention-ExtraBold.eot');
+    src: url('../industrydiveassessment/assets/fonts/Invention-ExtraBold.eot') format('embedded-opentype'),
+        url('../industrydiveassessment/assets/fonts/Invention-ExtraBold.woff2') format('woff2'),
+        url('../industrydiveassessment/assets/fonts/Invention-ExtraBold.woff') format('woff'),
+        url('../industrydiveassessment/assets/fonts/Invention-ExtraBold.ttf') format('truetype'),
+        url('../industrydiveassessment/assets/fonts/Invention-ExtraBold.svg') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Invention Regular';
+    src: url('../industrydiveassessment/assets/fonts/Invention-Regular.eot');
+    src: url('../industrydiveassessment/assets/fonts/Invention-Regular.eot') format('embedded-opentype'),
+        url('../industrydiveassessment/assets/fonts/Invention-Regular.woff2') format('woff2'),
+        url('../industrydiveassessment/assets/fonts/Invention-Regular.woff') format('woff'),
+        url('../industrydiveassessment/assets/fonts/Invention-Regular.ttf') format('truetype'),
+        url('../industrydiveassessment/assets/fonts/Invention-Regular.svg') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Khand Bold';
+    src: url('../industrydiveassessment/assets/fonts/Khand-Bold.eot');
+    src: url('../industrydiveassessment/assets/fonts/Khand-Bold.eot') format('embedded-opentype'),
+        url('../industrydiveassessment/assets/fonts/Khand-Bold.woff2') format('woff2'),
+        url('../industrydiveassessment/assets/fonts/Khand-Bold.woff') format('woff'),
+        url('../industrydiveassessment/assets/fonts/Khand-Bold.ttf') format('truetype'),
+        url('../industrydiveassessment/assets/fonts/Khand-Bold.svg') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Khand Bold';
+    color: #5a5a5a;
+    margin: 5px 0;
+    line-height: 1em;;
+}
+p{
+    color: #5a5a5a;
+    font-family: 'Invention Regular';
+    margin: 0;
+    line-height: 1;
+}
+
+.container {
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* Header CSS */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 80px;
+    padding: 30px 0;
+}
+header {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 100;
+    margin: 0;
+}
+
+.header-search, .header-subscribe {
+    max-width: 220px;
+    width: 100%;
+}
+.header-subscribe {
+    text-align: right;
+}
+
+.header-title {
+    width: calc(100% - 440px);
+}
+
+.header-title {
+    text-align: center;
+}
+.header-title h1 {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.header-title p {
+    margin-top: 15px;
+}
+
+.header-search input#search {
+    background: #ececec;
+    border: none;
+    outline: none;
+    padding: 15px;
+    border-radius: 60px;
+}
+
+.header-search input#search::before{
+    content: "/f002";
+
+}
+
+.header-subscribe a {
+    padding: 12px 20px;
+    border-radius: 30px;
+    background: #009791;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Invention Regular';
+    display: inline-block;
+}
+
+.header-menu {
+    text-align: center;
+}
+
+.header-menu ul {
+    list-style: none;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.header-menu ul li {
+    padding: 0 15px;
+    text-align: center;
+}
+
+.header-menu ul a {
+    text-decoration: none;
+    font-family: 'Invention Regular';
+    color: #5a5a5a;
+    font-size: 20px;
+}
+
+.header-menu ul a:hover,
+ul.hero-cat li a:hover,
+.readtime-link a:hover,
+ul.posts-cat li a:hover,
+.footer-menu ul li a:hover{
+    color: #009791;
+}
+
+/* Hero Section */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.4);
+    z-index: -1;
+}
+.hero-section {
+    background: url(../industrydiveassessment/assets/img/hero-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 700px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    max-width: 1400px;
+    width: 100%;
+}
+
+ul.hero-cat {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #fff;
+}
+ul.hero-cat li::after {
+    content: "|";
+    margin: 0 6px;
+}
+
+ul.hero-cat li:last-child::after {
+    display: none;
+}
+ul.hero-cat li a {
+    color: #fff;
+    font-family: 'Invention Bold';
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+
+
+.hero-content h1 {
+    font-family: 'Khand Bold';
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 60px;
+    margin: 10px 0 20px 0;
+}
+
+.readtime-link {
+    color: #fff;
+}
+
+.readtime-link p::after{
+    content: "|";
+    margin: 0 6px;
+}
+.readtime-link a, .readtime-link p {
+    display: inline-block;
+    color: #fff;
+    font-family: 'Invention Regular';
+    text-decoration: none;
+}
+
+/* Featured Posts */
+
+h1.section-title {
+    font-family: 'Invention Regular';
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 50px;
+}
+
+.featured-posts-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+}
+
+.featured-posts-wrapper .featured-post-item:first-child { grid-area: 1 / 1 / 2 / 2; }
+.featured-posts-wrapper .featured-post-item:nth-child(2) { grid-area: 2 / 1 / 3 / 2; }
+.featured-posts-wrapper .featured-post-item:last-child { grid-area: 1 / 2 / 3 / 3; }
+
+.featured-posts-section{
+    padding-top: 50px;
+}
+.featured-posts-section, .trending-posts-section {
+    padding-bottom: 50px;
+}
+.featured-post-item, .trending-post-item, .latest-post-item{
+    min-height: 250px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: end;
+    padding: 40px;
+}
+
+.latest-post-item{
+    min-height: 280px;
+}
+.featured-post-item::before, .trending-post-item::before, .latest-post-item::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,.4);
+    z-index: -1;
+}
+
+ul.posts-cat li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Invention Regular';;
+}
+ul.posts-cat li:last-child::after {
+    display: none;
+}
+ul.posts-cat li::after {
+    content: "|";
+    margin: 0 8px;
+    color: #fff;
+}
+ul.posts-cat {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+}
+
+.featured-post-content h1, .trending-post-content h1, .latest-post-content h1 {
+    color: #fff;
+    margin: 10px 0 20px 0;
+    text-transform: uppercase;
+}
+
+/* Trending Posts */
+.trending-posts-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    }
+
+.trending-posts-wrapper .trending-post-item:first-child { grid-area: 1 / 1 / 3 / 2; }
+.trending-posts-wrapper .trending-post-item:nth-child(2) { grid-area: 1 / 2 / 2 / 3; }
+.trending-posts-wrapper .trending-post-item:last-child { grid-area: 2 / 2 / 3 / 3; }
+
+
+/* Latest Posts */
+
+.latest-posts-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    }
+
+.latest-post-item:first-child { grid-area: 1 / 1 / 2 / 2; }
+.latest-post-item:nth-child(2) { grid-area: 1 / 2 / 2 / 3; }
+.latest-post-item:nth-child(3) { grid-area: 1 / 3 / 2 / 4; }
+.latest-post-item:nth-child(4) { grid-area: 2 / 1 / 3 / 2; }
+.latest-post-item:nth-child(5) { grid-area: 2 / 2 / 3 / 3; }
+.latest-post-item:last-child { grid-area: 2 / 3 / 3 / 4; }
+
+.load-more button {
+    background: #009791;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 50px;
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Khand Bold';
+    text-transform: uppercase;
+    font-size: 25px;
+    border: none;
+}
+.load-more {
+    text-align: center;
+    padding: 50px 0;
+}
+
+
+/* Footer */
+
+footer {
+    background: #333e47;
+    padding: 100px 0;
+}
+
+.footer-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left, .footer-right {
+    width: 50%;
+}
+
+.footer-news-letter a {
+    background: #fff;
+    color: #5a5a5a;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 1;
+    padding: 20px 30px;
+    border-radius: 40px;
+    font-family: 'Invention Bold';
+    display: flex;
+    text-align: center;
+    max-width: 110px;
+    margin-left: auto;
+}
+
+.footer-news-letter a img {
+    max-width: 20px;
+    margin-right: 10px;
+    margin-top: -2px;
+}
+
+.footer-menu ul li {
+    margin-right: 30px;
+}
+
+.footer-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Invention Bold';
+}
+.footer-menu ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-copyright {
+    padding: 50px 0;
+}
+.footer-copyright p {
+    color: #fff;
+}
+
+.footer-news-letter h2 {
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-family: 'Invention Regular';
+}
+
+
+/* Responsive CSS */
+
+@media (max-width: 1399px) {
+
+    .container{
+        padding: 0 30px;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .hero-section{
+        height: 400px;
+    }
+    .featured-posts-wrapper, .trending-posts-wrapper, .latest-posts-wrapper{
+        display: unset;
+    }
+    .featured-post-item, .trending-post-item, .latest-post-item {
+        margin-bottom: 25px;
+    }
+
+    h1.section-title{
+        margin-bottom: 30px;
+    }
+    .featured-posts-section, .trending-posts-section {
+        padding-bottom: 20px;
+    }
+    .hero-content h1{
+        font-size: 40px;
+    }
+    .footer-left, .footer-right {
+        width: 100%;
+        text-align: center;
+    }
+    .footer-menu ul{
+        justify-content: center;
+    }
+    .footer-news-letter a{
+        margin: auto;
+    }
+    .footer-copyright {
+        padding: 20px 0;
+    }
+
+    footer {
+        background: #333e47;
+    }
+
+    .header{
+        display: unset;
+    }
+    .header-search {
+        max-width: 100%;
+        width: 100%;
+        margin: auto;
+        text-align: center !important;
+    }
+
+    .header-subscribe{
+        display: none;
+    }
+
+    header{
+        padding-top: 30px;
+    }
+    .header-title {
+        width: 100%;
+        padding: 20px 10px;
+    }
+    .header-subscribe a{
+        margin-top: 25px;
+    }
+
+}
+
+@media (max-width: 1024px) {
+    .featured-post-content h1, .trending-post-content h1, .latest-post-content h1{
+        font-size: 25px;
+        line-height: 1.2;
+    }
+}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  /*position: fixed;*/
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 90%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
